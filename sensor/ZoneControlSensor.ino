@@ -30,7 +30,7 @@ bool retained = true;
 //Room State
 enum RoomState
 {
-	ACTIVE, CAUTION, EMERGENCY
+	ACTIVE, CAUTION, EMERGENCY, INACTIVE
 };
 
 RoomState newRoomState;
@@ -136,6 +136,7 @@ void setRoomState() {
 			digitalWrite(leds[i], LOW);
 		}
 		//set current state to inactive
+		currentRoomState = INACTIVE;
 		returnCode = publish("state", "inactive");
 	}
 	//else if emergency button pressed
@@ -146,6 +147,7 @@ void setRoomState() {
 		//turn on emergency LED
 		digitalWrite(leds[2], HIGH);
 		//set current state to emergency
+		currentRoomState = EMERGENCY;
 		returnCode = publish("state", "emergency");
 	}
 	//else if caution button pressed
@@ -156,6 +158,7 @@ void setRoomState() {
 		//turn on caution LED
 		digitalWrite(leds[1], HIGH);
 		//set current state to caution
+		currentRoomState = CAUTION;
 		returnCode = publish("state", "caution");
 	}
 	//else if active button pressed
@@ -166,6 +169,7 @@ void setRoomState() {
 		//turn on active LED
 		digitalWrite(leds[0], HIGH);
 		//set current state to active
+		currentRoomState = ACTIVE;
 		returnCode = publish("state", "active");
 	}
 	//if message publish not successful, error has occured
@@ -249,6 +253,7 @@ void setup() {
 	//connect to MQTT broker
 	connect();
 	//set current room state to inactive
+	currentRoomState = INACTIVE;
 	publish("state", "inactive");
 }
 
