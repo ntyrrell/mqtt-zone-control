@@ -24,7 +24,7 @@ char room[21] = "roman"; //name of room within building
 //MQTT constants
 #define MQTTCLIENT_QOS2 1
 const char* mainTopic = "londonbridge";
-MQTT::QoS qos = MQTT::QOS2;
+MQTT::QoS qos = MQTT::QOS1;
 bool retained = true;
 
 //Room State
@@ -96,7 +96,7 @@ void connect() {
 /**
 Publishes a message to the MQTT Broker
 */
-int publish(char topic[11], char message[11]) {
+int publishToBroker(char topic[11], char message[11]) {
 	//initialise variables
 	char topicBuffer[100];
 	char messageBuffer[100];
@@ -116,6 +116,10 @@ int publish(char topic[11], char message[11]) {
 	payloadlen = strlen(messageBuffer) + 1;
 
 	//publish message
+	Serial.print("Topic: ");
+	Serial.println(topicBuffer);
+	Serial.print("Message: ");
+	Serial.println((char*)payload);
 	int returnCode = mqttClient.publish(topicBuffer, payload, payloadlen, qos, retained);
 	return returnCode;
 }
@@ -137,7 +141,7 @@ void setRoomState() {
 		}
 		//set current state to inactive
 		currentRoomState = INACTIVE;
-		returnCode = publish("state", "inactive");
+		returnCode = publishToBroker("state", "inactive");
 	}
 	//else if emergency button pressed
 	else if (newRoomState == EMERGENCY) {
@@ -148,7 +152,7 @@ void setRoomState() {
 		digitalWrite(leds[2], HIGH);
 		//set current state to emergency
 		currentRoomState = EMERGENCY;
-		returnCode = publish("state", "emergency");
+		returnCode = publishToBroker("state", "emergency");
 	}
 	//else if caution button pressed
 	else if (newRoomState == CAUTION) {
@@ -159,7 +163,7 @@ void setRoomState() {
 		digitalWrite(leds[1], HIGH);
 		//set current state to caution
 		currentRoomState = CAUTION;
-		returnCode = publish("state", "caution");
+		returnCode = publishToBroker("state", "caution");
 	}
 	//else if active button pressed
 	else if (newRoomState == ACTIVE) {
@@ -170,7 +174,7 @@ void setRoomState() {
 		digitalWrite(leds[0], HIGH);
 		//set current state to active
 		currentRoomState = ACTIVE;
-		returnCode = publish("state", "active");
+		returnCode = publishToBroker("state", "active");
 	}
 	//if message publish not successful, error has occured
 	//report an error until board restarted and problem fixed
@@ -251,15 +255,18 @@ void setup() {
 	//establish Ethernet connection
 	Ethernet.begin(mac);
 	//connect to MQTT broker
-	connect();
+	while (!mqttClient.isConnected()){
+		connect();
+	}
 	//set current room state to inactive
 	currentRoomState = INACTIVE;
-	publish("state", "inactive");
+	publishToBroker("state", "inactive");
 }
 
 void loop() {
 	if (!mqttClient.isConnected()) {
 		connect();
+	} else {
+		checkSwitches();
 	}
-	checkSwitches();
 }
