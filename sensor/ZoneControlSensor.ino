@@ -4,6 +4,8 @@ Copyright (c) Nicholas Tyrrell, Bournemouth University
 Code inspired by http://www.eclipse.org/paho/clients/c/embedded/
 */
 
+#define MQTTCLIENT_QOS2 1
+
 #include <SPI.h>
 #include <Ethernet2.h>
 #include <IPStack.h>
@@ -22,9 +24,8 @@ MQTT::Client<IPStack, Countdown, 50, 1> mqttClient = MQTT::Client<IPStack, Count
 char room[21] = "roman"; //name of room within building
 
 //MQTT constants
-#define MQTTCLIENT_QOS2 1
 const char* mainTopic = "londonbridge";
-MQTT::QoS qos = MQTT::QOS1;
+MQTT::QoS qos = MQTT::QOS2;
 bool retained = true;
 
 //Room State
@@ -65,11 +66,22 @@ void connect() {
 	returnCode = ipstack.connect(host, port);
 	//if IP connection successful
 	if (returnCode == 1) {
+		//dynamically set the room's state for will message topic
+		char willTopicBuffer[100];
+		strcpy(willTopicBuffer, mainTopic);
+		strcat(willTopicBuffer, "/");
+		strcat(willTopicBuffer, room);
+		strcat(willTopicBuffer, "/state");
+
 		//initialise MQTT connection data
 		MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
-		data.MQTTVersion = 3;
+		data.willFlag = 1;
+		data.MQTTVersion = 4;
 		data.clientID.cstring = (char*)"sensor-1";
-
+		data.will.topicName.cstring = (char*)willTopicBuffer;
+		data.will.qos = 2;
+		data.will.retained = 1;
+		data.will.message.cstring = (char*)"error";
 		//connect to MQTT broker
 		returnCode = mqttClient.connect(data);
 		//if MQTT connection successful
@@ -96,7 +108,10 @@ void connect() {
 /**
 Publishes a message to the MQTT Broker
 */
-int publishToBroker(char topic[11], char message[11]) {
+void publishToBroker(char topic[11], char message[11]) {
+	//turn on send LED
+	digitalWrite(leds[3], HIGH);
+
 	//initialise variables
 	char topicBuffer[100];
 	char messageBuffer[100];
@@ -121,61 +136,6 @@ int publishToBroker(char topic[11], char message[11]) {
 	Serial.print("Message: ");
 	Serial.println((char*)payload);
 	int returnCode = mqttClient.publish(topicBuffer, payload, payloadlen, qos, retained);
-	return returnCode;
-}
-
-/**
-Sets the current state of the room
-*/
-void setRoomState() {
-	//initialise variable
-	int returnCode = -1;
-
-	//turn on send LED
-	digitalWrite(leds[3], HIGH);
-	//if new state is equal to current state
-	if (newRoomState == currentRoomState) {
-		//turn off state LEDs
-		for (int i = 0; i < numLeds - 1; i++) {
-			digitalWrite(leds[i], LOW);
-		}
-		//set current state to inactive
-		currentRoomState = INACTIVE;
-		returnCode = publishToBroker("state", "inactive");
-	}
-	//else if emergency button pressed
-	else if (newRoomState == EMERGENCY) {
-		//turn off active and caution LEDs
-		digitalWrite(leds[0], LOW);
-		digitalWrite(leds[1], LOW);
-		//turn on emergency LED
-		digitalWrite(leds[2], HIGH);
-		//set current state to emergency
-		currentRoomState = EMERGENCY;
-		returnCode = publishToBroker("state", "emergency");
-	}
-	//else if caution button pressed
-	else if (newRoomState == CAUTION) {
-		//turn off active and emergency LEDs
-		digitalWrite(leds[0], LOW);
-		digitalWrite(leds[2], LOW);
-		//turn on caution LED
-		digitalWrite(leds[1], HIGH);
-		//set current state to caution
-		currentRoomState = CAUTION;
-		returnCode = publishToBroker("state", "caution");
-	}
-	//else if active button pressed
-	else if (newRoomState == ACTIVE) {
-		//turn off emergency and caution LEDs
-		digitalWrite(leds[1], LOW);
-		digitalWrite(leds[2], LOW);
-		//turn on active LED
-		digitalWrite(leds[0], HIGH);
-		//set current state to active
-		currentRoomState = ACTIVE;
-		returnCode = publishToBroker("state", "active");
-	}
 	//if message publish not successful, error has occured
 	//report an error until board restarted and problem fixed
 	while (returnCode != 0) {
@@ -191,6 +151,55 @@ void setRoomState() {
 	}
 	//turn off send LED
 	digitalWrite(leds[3], LOW);
+}
+
+/**
+Sets the current state of the room
+*/
+void setRoomState() {
+	//if new state is equal to current state
+	if (newRoomState == currentRoomState) {
+		//turn off state LEDs
+		for (int i = 0; i < numLeds - 1; i++) {
+			digitalWrite(leds[i], LOW);
+		}
+		//set current state to inactive
+		currentRoomState = INACTIVE;
+		publishToBroker("state", "inactive");
+	}
+	//else if emergency button pressed
+	else if (newRoomState == EMERGENCY) {
+		//turn off active and caution LEDs
+		digitalWrite(leds[0], LOW);
+		digitalWrite(leds[1], LOW);
+		//turn on emergency LED
+		digitalWrite(leds[2], HIGH);
+		//set current state to emergency
+		currentRoomState = EMERGENCY;
+		publishToBroker("state", "emergency");
+	}
+	//else if caution button pressed
+	else if (newRoomState == CAUTION) {
+		//turn off active and emergency LEDs
+		digitalWrite(leds[0], LOW);
+		digitalWrite(leds[2], LOW);
+		//turn on caution LED
+		digitalWrite(leds[1], HIGH);
+		//set current state to caution
+		currentRoomState = CAUTION;
+		publishToBroker("state", "caution");
+	}
+	//else if active button pressed
+	else if (newRoomState == ACTIVE) {
+		//turn off emergency and caution LEDs
+		digitalWrite(leds[1], LOW);
+		digitalWrite(leds[2], LOW);
+		//turn on active LED
+		digitalWrite(leds[0], HIGH);
+		//set current state to active
+		currentRoomState = ACTIVE;
+		publishToBroker("state", "active");
+	}
 }
 
 /**
