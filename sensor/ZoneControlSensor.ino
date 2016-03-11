@@ -4,8 +4,6 @@ Copyright (c) Nicholas Tyrrell, Bournemouth University
 Code inspired by http://www.eclipse.org/paho/clients/c/embedded/
 */
 
-#define MQTTCLIENT_QOS2 1
-
 #include <SPI.h>
 #include <Ethernet2.h>
 #include <IPStack.h>
@@ -19,14 +17,15 @@ IPStack ipstack(ethClient);
 //IP constants
 byte mac[] = { 0x90, 0xA2, 0xDA, 0x10, 0x39, 0x37 }; //MAC address for sensor device
 
-//MQTT variables
-MQTT::Client<IPStack, Countdown, 50, 1> mqttClient = MQTT::Client<IPStack, Countdown, 50, 1>(ipstack);
-char room[21] = "roman"; //name of room within building
-
 //MQTT constants
 const char* mainTopic = "londonbridge";
-MQTT::QoS qos = MQTT::QOS2;
+MQTT::QoS qos = MQTT::QOS1;
 bool retained = true;
+int timeout = 5000; //5 seconds for client to publish before timing out
+
+//MQTT variables
+MQTT::Client<IPStack, Countdown> mqttClient = MQTT::Client<IPStack, Countdown>(ipstack, timeout);
+char room[21] = "roman"; //name of room within building
 
 //Room State
 enum RoomState
@@ -77,6 +76,8 @@ void connect() {
 		MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
 		data.willFlag = 1;
 		data.MQTTVersion = 4;
+		data.cleansession = 1;
+		data.keepAliveInterval = 10;
 		data.clientID.cstring = (char*)"sensor-1";
 		data.will.topicName.cstring = (char*)willTopicBuffer;
 		data.will.qos = 2;
@@ -273,9 +274,9 @@ void setup() {
 }
 
 void loop() {
-	if (!mqttClient.isConnected()) {
+	while (!mqttClient.isConnected()) {
 		connect();
-	} else {
-		checkSwitches();
 	}
+	checkSwitches();
+	mqttClient.yield(10);
 }
