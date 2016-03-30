@@ -25,6 +25,7 @@ int timeout = 5000; //5 seconds for client to publish before timing out
 
 //MQTT variables
 MQTT::Client<IPStack, Countdown> mqttClient = MQTT::Client<IPStack, Countdown>(ipstack, timeout);
+char floorName[21] = "ground"; //floor of room within building
 char room[21] = "roman"; //name of room within building
 
 //Room State
@@ -68,6 +69,8 @@ void connect() {
 		//dynamically set the room's state for will message topic
 		char willTopicBuffer[100];
 		strcpy(willTopicBuffer, mainTopic);
+		strcat(willTopicBuffer, "/");
+		strcat(willTopicBuffer, floorName);
 		strcat(willTopicBuffer, "/");
 		strcat(willTopicBuffer, room);
 		strcat(willTopicBuffer, "/state");
@@ -121,6 +124,8 @@ void publishToBroker(char topic[11], char message[11]) {
 
 	//store copy of input arrays to buffers
 	strcpy(topicBuffer, mainTopic);
+	strcat(topicBuffer, "/");
+	strcat(topicBuffer, floorName);
 	strcat(topicBuffer, "/");
 	strcat(topicBuffer, room);
 	strcat(topicBuffer, "/");
