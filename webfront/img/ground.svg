@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100%"
+   height="100%"
+   viewBox="0 0 805 667"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ground.svg">
+  <title
+     id="floortitle">Ground</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.99999999"
+     inkscape:cx="473.98259"
+     inkscape:cy="222.29409"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>TLBE Ground Floorplan</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="ground"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-64.149745,-334.28896)"
+     >
+    <g
+       id="room_1"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_1"
+         y="447.91183"
+         x="105.85667"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="447.91183"
+           x="105.85667"
+           id="tspan3873-86"
+           sodipodi:role="line">Room 1</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="outline_room_1"
+         d="M 146.47212,615.9763 C 106.54046,594.17136 64.649763,599.81386 64.649763,599.81386 l 0.0053,-170.30788 81.761077,-0.4079 z"
+         
+         class="outline" />
+      <path
+         transform="matrix(0,-1,1,0,0,0)"
+         d="m -467.01247,115.80601 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.22371"
+         sodipodi:rx="13.342454"
+         sodipodi:cy="115.80601"
+         sodipodi:cx="-480.35492"
+         sodipodi:type="arc"
+         id="door_1_room_1"
+         
+         class="door" />
+      <path
+         inkscape:connector-curvature="0"
+         id="divider_1_room_1"
+         d="m 64.5,465.6122 51.375,0 0,14.875 30.5,0"
+         
+         class="divider" />
+    </g>
+    <g
+       id="room_2"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_2"
+         y="439.42651"
+         x="203.43741"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="439.42651"
+           x="203.43741"
+           id="tspan3873-2"
+           sodipodi:role="line">Room 2</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_room_2"
+         d="m 162.85714,427.4444 0.0121,4.47837 17.01921,0.0825 0.0119,27.44132 -16.64032,-0.0383 0.31136,164.7392 80.35714,-0.35063 0,-211.0789 z"
+         
+         class="outline" />
+      <path
+         inkscape:connector-curvature="0"
+         id="divider_1_room_2"
+         d="m 208,624.1122 0,-140.25"
+         
+         class="divider" />
+      <g
+         id="doors_room_2"
+         class="doors">
+        <path
+           d="m 225.6277,569.74036 a 17.531223,17.531223 0 0 1 -17.53122,17.53122 l 0,-17.53122 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="17.531223"
+           sodipodi:rx="17.531223"
+           sodipodi:cy="569.74036"
+           sodipodi:cx="208.09648"
+           sodipodi:type="arc"
+           id="door_1_room_2"
+           
+           class="door" />
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 587.27117,-243.93665 a 17.531,17.531 0 0 1 -17.531,17.531 l 0,-17.531 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="17.531"
+           sodipodi:rx="17.531"
+           sodipodi:cy="-243.93665"
+           sodipodi:cx="569.74017"
+           sodipodi:type="arc"
+           id="door_2_room_2"
+           
+           class="door" />
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 451.89388,-179.85303 a 13.342454,13.22371 0 0 1 -13.34246,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="-179.85303"
+           sodipodi:cx="438.55142"
+           sodipodi:type="arc"
+           id="door_3_room_2"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="room_3"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_3"
+         y="415.38492"
+         x="300.31104"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="415.38492"
+           x="300.31104"
+           id="tspan3873-8"
+           sodipodi:role="line">Room 3</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="outline_room_3"
+         d="m 260.61813,407.12726 0,168.94802 80.56213,0 0,-190.6663 z"
+         
+         class="outline" />
+      <g
+         id="doors_room_3"
+         class="doors">
+        <path
+           transform="matrix(0,-1,1,0,0,0)"
+           d="m -431.53154,260.51715 a 13.398424,13.281268 0 0 1 -13.39842,13.28127 l 0,-13.28127 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.281268"
+           sodipodi:rx="13.398424"
+           sodipodi:cy="260.51715"
+           sodipodi:cx="-444.92996"
+           sodipodi:type="arc"
+           id="door_1_room_3"
+           
+           class="door" />
+        <path
+           d="m 273.7981,417.53873 a 13.281099,13.398253 0 0 1 -13.2811,13.39825 l 0,-13.39825 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.398253"
+           sodipodi:rx="13.281099"
+           sodipodi:cy="417.53873"
+           sodipodi:cx="260.517"
+           sodipodi:type="arc"
+           id="door_2_room_3"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="1830_bridge"
+       class="room">
+      <text
+         transform="translate(0,308.26772)"
+         sodipodi:linespacing="125%"
+         id="text_1830_bridge"
+         y="96.586693"
+         x="391.23471"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           
+           y="96.586693"
+           x="391.23471"
+           id="tspan3397"
+           sodipodi:role="line">1830</tspan><tspan
+           id="tspan3399"
+           
+           y="118.46169"
+           x="391.23471"
+           sodipodi:role="line">Bridge</tspan></text>
+      <rect
+         ry="0"
+         y="383.61221"
+         x="355.89285"
+         height="242.85716"
+         width="75.000015"
+         id="outline_1830_bridge"
+         
+         class="outline" />
+    </g>
+    <g
+       id="burning_bridge"
+       class="room">
+      <text
+         transform="translate(0,308.26772)"
+         sodipodi:linespacing="125%"
+         id="text_burning_bridge"
+         y="47.655514"
+         x="482.30362"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           
+           y="47.655514"
+           x="482.30362"
+           id="tspan3397-1"
+           sodipodi:role="line">Burning</tspan><tspan
+           id="tspan3399-0"
+           
+           y="69.530518"
+           x="482.30362"
+           sodipodi:role="line">Bridge</tspan></text>
+      <rect
+         ry="0"
+         y="337.27997"
+         x="443.0621"
+         height="289.03571"
+         width="78.571442"
+         id="outline_burning_bridge"
+         
+         class="outline" />
+    </g>
+    <g
+       id="room_4"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_4"
+         y="394.87881"
+         x="582.44659"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="394.87881"
+           x="582.44659"
+           id="tspan3873-3"
+           sodipodi:role="line">Room 4</tspan></text>
+      <rect
+         y="378.07651"
+         x="531.78571"
+         height="70.714287"
+         width="111.10329"
+         id="outline_room_4"
+         
+         class="outline" />
+    </g>
+    <g
+       id="william_wallace"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_william_wallace"
+         y="395.48361"
+         x="728.96301"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-0-3"
+           
+           y="395.48361"
+           x="728.96301"
+           sodipodi:role="line">William Wallace</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_william_wallace"
+         d="m 642.9621,378.08538 0,-4.9245 27.02158,0 0,4.16688 147.51632,0 0,30.74873 49.64286,0 0,41.05348 -173.21429,0 0,-18.55348 -51.02961,0 z"
+         
+         class="outline" />
+      <g
+         id="doors_william_wallace"
+         class="doors">
+        <path
+           transform="matrix(0,-1,1,0,0,0)"
+           d="m -417.27342,642.95074 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l -1e-5,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="642.95074"
+           sodipodi:cx="-430.61588"
+           sodipodi:type="arc"
+           id="door_1_william_wallace"
+           
+           class="door" />
+        <path
+           d="m 656.17416,403.33905 a 13.223542,13.342284 0 0 1 -13.22354,13.34228 l 0,-13.34228 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.342284"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="403.33905"
+           sodipodi:cx="642.95062"
+           sodipodi:type="arc"
+           id="door_2_william_wallace"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="room_5"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_5"
+         y="483.14124"
+         x="578.41333"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="483.14124"
+           x="578.41333"
+           id="tspan3873"
+           sodipodi:role="line">Room 5</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_room_5"
+         d="m 631.34534,465.46357 0,27.7792 -58.08377,0 0,43.18402 -39.39595,0 0,-70.96321 z"
+         
+         class="outline" />
+      <g
+         id="doors_room_5"
+         class="doors">
+        <path
+           transform="matrix(0,-1,1,0,0,0)"
+           d="m -479.44033,631.35107 a 13.284248,11.788866 0 0 1 -13.28425,11.78887 l 0,-11.78887 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="11.788866"
+           sodipodi:rx="13.284248"
+           sodipodi:cy="631.35107"
+           sodipodi:cx="-492.72458"
+           sodipodi:type="arc"
+           id="door_1_room_5"
+           
+           class="door" />
+        <path
+           d="m 643.13967,465.56674 a 11.788717,13.284079 0 0 1 -11.78872,13.28408 l 0,-13.28408 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.284079"
+           sodipodi:rx="11.788717"
+           sodipodi:cy="465.56674"
+           sodipodi:cx="631.35095"
+           sodipodi:type="arc"
+           id="door_2_room_5"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="compressor"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_compressor"
+         y="511.42551"
+         x="610.23315"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="511.42551"
+           x="610.23315"
+           id="tspan3877"
+           sodipodi:role="line">Comp.</tspan></text>
+      <rect
+         y="493.24277"
+         x="573.2616"
+         height="43.436558"
+         width="72.983521"
+         id="outline_compressor"
+         
+         class="outline" />
+      <path
+         transform="scale(-1,-1)"
+         d="m -632.88821,-536.65839 a 13.223542,13.342284 0 0 1 -13.22355,13.34229 l 0,-13.34229 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.342284"
+         sodipodi:rx="13.223542"
+         sodipodi:cy="-536.65839"
+         sodipodi:cx="-646.11176"
+         sodipodi:type="arc"
+         id="door_1_compressor"
+         
+         class="door" />
+    </g>
+    <g
+       id="viking_room_3"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_viking_room_3"
+         y="481.01993"
+         x="748.11896"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="481.01993"
+           x="748.11896"
+           id="tspan3881"
+           sodipodi:role="line">Viking Room 3</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_viking_room_3"
+         d="m 645.99255,536.8579 158.84649,0 24.74874,-72.15194 -156.32111,0 0,41.66879 -27.16951,0 z"
+         
+         class="outline" />
+    </g>
+    <g
+       id="viking_room_2"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_viking_room_2"
+         y="573.09534"
+         x="709.96936"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-0-3-6"
+           
+           y="573.09534"
+           x="709.96936"
+           sodipodi:role="line">Viking Room 2</tspan></text>
+      <rect
+         transform="translate(0,308.26772)"
+         y="245.07913"
+         x="617.70825"
+         height="71.215752"
+         width="193.44421"
+         id="outline_viking_room_2"
+         
+         class="outline" />
+    </g>
+    <g
+       id="crown_room"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_crown_room"
+         y="660.70288"
+         x="334.82886"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-0-3-6-5-74"
+           
+           y="660.70288"
+           x="334.82886"
+           sodipodi:role="line">Crown</tspan><tspan
+           id="tspan3785"
+           
+           y="682.57788"
+           x="334.82886"
+           sodipodi:role="line">Room</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_crown_room"
+         d="m 378.92858,644.14792 -1e-5,28.21428 30.71429,0 0,43.92857 -85,0 -36.07143,-34.64285 0,-37.5 z"
+         
+         class="outline" />
+      <g
+         id="doors_crown_room"
+         class="doors">
+        <path
+           d="m 393.79404,672.62958 a 14.922646,14.848697 0 0 1 -14.92264,14.84869 l 0,-14.84869 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="14.848697"
+           sodipodi:rx="14.922646"
+           sodipodi:cy="672.62958"
+           sodipodi:cx="378.8714"
+           sodipodi:type="arc"
+           id="door_1_crown_room"
+           
+           class="door" />
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 687.47796,-409.37869 a 14.848508,14.922456 0 0 1 -14.8485,14.92245 l 0,-14.92245 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="14.922456"
+           sodipodi:rx="14.848508"
+           sodipodi:cy="-409.37869"
+           sodipodi:cx="672.62946"
+           sodipodi:type="arc"
+           id="door_2_crown_room"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="roman_walkthrough"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_roman_walkthrough"
+         y="672.70288"
+         x="545.32886"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-0-3-6-5-7"
+           
+           y="672.70288"
+           x="545.32886"
+           sodipodi:role="line">Roman</tspan><tspan
+           id="tspan3775"
+           
+           y="694.57788"
+           x="545.32886"
+           sodipodi:role="line">walkthrough</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_roman_walkthough"
+         d="m 603.92735,643.25804 0,73.02623 -194.28326,0.005 0,-43.78564 98.57018,0 0,-29.06904 z"
+         
+         class="outline" />
+      <g
+         id="doors_roman_walkthrough"
+         class="doors">
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 668.99043,-603.73676 a 13.861277,13.22371 0 0 1 -13.86128,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.861277"
+           sodipodi:cy="-603.73676"
+           sodipodi:cx="655.12915"
+           sodipodi:type="arc"
+           id="door_1_roman_walkthrough"
+           
+           class="door" />
+        <path
+           transform="scale(-1,-1)"
+           d="m -590.51334,-683.46661 a 13.223542,13.8611 0 0 1 -13.22354,13.8611 l 0,-13.8611 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.8611"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="-683.46661"
+           sodipodi:cx="-603.73688"
+           sodipodi:type="arc"
+           id="door_2_roman_walkthrough"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="viking_room_1"
+       class="room">
+      <text
+         transform="scale(0.9804552,1.0199344)"
+         sodipodi:linespacing="125%"
+         id="text_viking_room_1"
+         y="646.12335"
+         x="683.45374"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-0-3-6-5"
+           
+           y="646.12335"
+           x="683.45374"
+           sodipodi:role="line">Viking Room 1</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="outline_viking_room_1"
+         d="m 603.92857,643.25426 138.57143,0 -26.9672,48.58933 0,24.41506 -36.60423,0 0,-27.20815 -75,0 z"
+         
+         sodipodi:nodetypes="cccccccc"
+         class="outline" />
+      <g
+         id="doors_viking_room_1"
+         class="doors">
+        <path
+           transform="matrix(0,-1,1,0,0,0)"
+           d="m -669.61523,603.6214 a 13.879704,13.22371 0 0 1 -13.8797,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.879704"
+           sodipodi:cy="603.6214"
+           sodipodi:cx="-683.49493"
+           sodipodi:type="arc"
+           id="door_1_viking_room_1"
+           
+           class="door" />
+        <path
+           d="m 616.84482,655.11975 a 13.223542,13.879527 0 0 1 -13.22354,13.87953 l 0,-13.87953 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.879527"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="655.11975"
+           sodipodi:cx="603.62128"
+           sodipodi:type="arc"
+           id="door_2_viking_room_1"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="room_6"
+       class="room">
+      <text
+         transform="scale(0.9804552,1.0199344)"
+         sodipodi:linespacing="125%"
+         id="text_room_6"
+         y="645.64185"
+         x="793.83044"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           y="645.64185"
+           x="793.83044"
+           id="tspan3873-27"
+           sodipodi:role="line">Room 6</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="outline_room_6"
+         d="m 742.32143,643.25426 86.07143,0 -10.79677,73.11382 -102.23895,0 0,-24.25847 z"
+         
+         class="outline" />
+    </g>
+    <g
+       id="bathroom"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_bathroom"
+         y="752.51526"
+         x="348.40433"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-2-4-9-7"
+           
+           y="752.51526"
+           x="348.40433"
+           sodipodi:role="line">W/C</tspan></text>
+      <rect
+         y="734.86224"
+         x="315.21295"
+         height="71.428604"
+         width="64.999985"
+         id="outline_bathroom"
+         
+         class="outline" />
+      <g
+         id="doors_bathroom"
+         class="doors">
+        <path
+           d="m 393.54619,792.75037 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="792.75037"
+           sodipodi:cx="380.20374"
+           sodipodi:type="arc"
+           id="door_1_bathroom"
+           
+           class="door" />
+        <path
+           d="m 393.54701,771.03937 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="771.03937"
+           sodipodi:cx="380.20456"
+           sodipodi:type="arc"
+           id="door_2_bathroom"
+           
+           class="door" />
+        <path
+           d="m 393.54701,753.45013 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="753.45013"
+           sodipodi:cx="380.20456"
+           sodipodi:type="arc"
+           id="door_3_bathroom"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="museum"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_museum"
+         y="752.84424"
+         x="511.43625"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-2-4-9"
+           
+           y="752.84424"
+           x="511.43625"
+           sodipodi:role="line">Museum</tspan></text>
+      <rect
+         y="734.16412"
+         x="409.74313"
+         height="72.48098"
+         width="214.65741"
+         id="outline_museum"
+         
+         class="outline" />
+      <g
+         id="doors_museum"
+         class="doors">
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 792.69127,-422.98679 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="-422.98679"
+           sodipodi:cx="779.34882"
+           sodipodi:type="arc"
+           id="door_1_museum"
+           
+           class="door" />
+        <path
+           transform="scale(-1,-1)"
+           d="m -409.76337,-806.62561 a 13.223542,13.342284 0 0 1 -13.22354,13.34228 l 0,-13.34228 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.342284"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="-806.62561"
+           sodipodi:cx="-422.98691"
+           sodipodi:type="arc"
+           id="door_2_museum"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="roman_room"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_roman_room"
+         y="746.97913"
+         x="741.88879"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-0-3-6-5-7-3"
+           
+           y="746.97913"
+           x="741.88879"
+           sodipodi:role="line">Roman</tspan><tspan
+           id="tspan3775-2"
+           
+           y="768.85413"
+           x="741.88879"
+           sodipodi:role="line">Room</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_roman_room"
+         d="m 679.07505,732.64892 132.83506,0 -6.34183,73.97297 -103.62204,0 0.0867,-25.76988 -23.17275,-0.29258 z"
+         
+         class="outline" />
+    </g>
+    <g
+       id="cafe"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_cafe"
+         y="842.70508"
+         x="491.48431"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-2-4"
+           
+           y="842.70508"
+           x="491.48431"
+           sodipodi:role="line">Cafe Brood</tspan></text>
+      <rect
+         y="826.59308"
+         x="328.80466"
+         height="76.266518"
+         width="324.25897"
+         id="outline_cafe"
+         
+         class="outline" />
+    </g>
+    <g
+       id="room_7"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_7"
+         y="842.78638"
+         x="721.40173"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3775-2-6"
+           
+           y="842.78638"
+           x="721.40173"
+           sodipodi:role="line">Room 7</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_room_7"
+         d="m 652.83634,826.4416 149.72986,0 0,76.09458 -122.50625,0 0,-18.76001 -27.13522,-0.0884 z"
+         
+         class="outline" />
+      <path
+         d="m 666.2719,846.14587 a 13.342454,13.22371 0 0 1 -13.34246,13.22371 l 0,-13.22371 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.22371"
+         sodipodi:rx="13.342454"
+         sodipodi:cy="846.14587"
+         sodipodi:cx="652.92944"
+         sodipodi:type="arc"
+         id="door_1_room_7"
+         
+         class="door" />
+    </g>
+    <g
+       id="retail"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_retail"
+         y="939.04822"
+         x="454.94949"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3399-2"
+           
+           y="939.04822"
+           x="454.94949"
+           sodipodi:role="line">Retail</tspan></text>
+      <rect
+         y="923.57489"
+         x="328.51962"
+         height="76.391945"
+         width="243.61281"
+         id="outline_retail"
+         
+         class="outline" />
+      <g
+         id="doors_retail"
+         class="doors">
+        <path
+           d="m 392.94383,986.70697 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="986.70697"
+           sodipodi:cx="379.60138"
+           sodipodi:type="arc"
+           id="door_1_retail"
+           
+           class="door" />
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 999.93039,-406.87817 a 13.223542,13.342284 0 0 1 -13.22354,13.34228 l 0,-13.34228 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.342284"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="-406.87817"
+           sodipodi:cx="986.70685"
+           sodipodi:type="arc"
+           id="door_2_retail"
+           
+           class="door" />
+        <path
+           transform="matrix(0,1,-1,0,0,0)"
+           d="m 937.01647,-572.00098 a 13.342454,13.22371 0 0 1 -13.34246,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="-572.00098"
+           sodipodi:cx="923.67401"
+           sodipodi:type="arc"
+           id="door_3_retail"
+           
+           class="door" />
+        <path
+           transform="scale(-1,-1)"
+           d="m -558.77756,-950.95081 a 13.223542,13.342284 0 0 1 -13.22354,13.34229 l 0,-13.34229 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.342284"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="-950.95081"
+           sodipodi:cx="-572.0011"
+           sodipodi:type="arc"
+           id="door_4_retail"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="photo"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_photo"
+         y="939.35205"
+         x="611.29065"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3775-2-6-2"
+           
+           y="939.35205"
+           x="611.29065"
+           sodipodi:role="line">Photo</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_photo"
+         d="m 572.125,923.6122 0,76.125 80.5,0 0,-48.7487 -16.26754,-0.0442 0.0884,-27.20711 z"
+         
+         class="outline" />
+      <g
+         id="doors_photo"
+         class="doors">
+        <path
+           transform="matrix(0,-1,1,0,0,0)"
+           d="m -937.59566,572.01324 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="572.01324"
+           sodipodi:cx="-950.93811"
+           sodipodi:type="arc"
+           id="door_1_photo"
+           
+           class="door" />
+        <path
+           d="m 585.23666,923.66132 a 13.223542,13.342284 0 0 1 -13.22354,13.34228 l 0,-13.34228 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.342284"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="923.66132"
+           sodipodi:cx="572.01312"
+           sodipodi:type="arc"
+           id="door_2_photo"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="room_8"
+       class="room">
+      <text
+         sodipodi:linespacing="125%"
+         id="text_room_8"
+         y="938.87769"
+         x="729.10266"
+         
+         xml:space="preserve"
+         class="room_name"><tspan
+           id="tspan3775-2-6-2-2"
+           
+           y="938.87769"
+           x="729.10266"
+           sodipodi:role="line">Room 8</tspan></text>
+      <path
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="outline_room_8"
+         d="m 652.5,999.7372 146.375,0 0,-14.625 5.5,0 0,-61.23851 -168,-0.0115 0,27.09375 16.25,0 z"
+         
+         class="outline" />
+      <g
+         id="doors_room_8"
+         class="doors">
+        <path
+           d="m 649.59409,923.68719 a 13.223542,13.342284 0 0 1 -13.22355,13.34229 l 0,-13.34229 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.342284"
+           sodipodi:rx="13.223542"
+           sodipodi:cy="923.68719"
+           sodipodi:cx="636.37054"
+           sodipodi:type="arc"
+           id="door_1_room_8"
+           
+           class="door" />
+        <path
+           transform="matrix(0,-1,1,0,0,0)"
+           d="m -937.62154,636.37067 a 13.342454,13.22371 0 0 1 -13.34245,13.22371 l 0,-13.22371 z"
+           sodipodi:end="1.5707963"
+           sodipodi:start="0"
+           sodipodi:ry="13.22371"
+           sodipodi:rx="13.342454"
+           sodipodi:cy="636.37067"
+           sodipodi:cx="-950.96399"
+           sodipodi:type="arc"
+           id="door_2_room_8"
+           
+           class="door" />
+      </g>
+    </g>
+    <g
+       id="group_corridor">
+      <path
+         transform="matrix(0,1,-1,0,0,0)"
+         d="m 896.92209,-680.13837 a 13.223542,13.255815 0 0 1 -13.22354,13.25582 l 0,-13.25582 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.255815"
+         sodipodi:rx="13.223542"
+         sodipodi:cy="-680.13837"
+         sodipodi:cx="883.69855"
+         sodipodi:type="arc"
+         id="path3960-3-2-8-4-2"
+          />
+      <path
+         d="m 666.29431,883.69867 a 13.255983,13.22371 0 0 1 -13.25598,13.22371 l 0,-13.22371 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.22371"
+         sodipodi:rx="13.255983"
+         sodipodi:cy="883.69867"
+         sodipodi:cx="653.03833"
+         sodipodi:type="arc"
+         id="path3960-1-6-8-4"
+          />
+      <path
+         transform="matrix(0,-1,1,0,0,0)"
+         d="m -783.19872,624.44434 a 23.324594,23.123205 0 0 1 -23.32459,23.1232 l -10e-6,-23.1232 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="23.123205"
+         sodipodi:rx="23.324594"
+         sodipodi:cy="624.44434"
+         sodipodi:cx="-806.52332"
+         sodipodi:type="arc"
+         id="path3960-1-6-8-34-9-72-2"
+          />
+      <path
+         d="m 647.74623,734.1814 a 23.324594,23.123205 0 0 1 -23.3246,23.1232 l 0,-23.1232 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="23.123205"
+         sodipodi:rx="23.324594"
+         sodipodi:cy="734.1814"
+         sodipodi:cx="624.42163"
+         sodipodi:type="arc"
+         id="path3960-1-6-8-34-9-72"
+          />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3929"
+         d="m 624.25,757.6122 27.5,0"
+          />
+      <path
+         transform="scale(-1,-1)"
+         d="m -493.95089,-672.49084 a 14.223521,14.314697 0 0 1 -14.22352,14.31469 l 0,-14.31469 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="14.314697"
+         sodipodi:rx="14.223521"
+         sodipodi:cy="-672.49084"
+         sodipodi:cx="-508.17441"
+         sodipodi:type="arc"
+         id="path3960-3-2-8-14"
+          />
+      <path
+         transform="matrix(0,1,-1,0,0,0)"
+         d="m 657.54095,-508.17429 a 14.314879,14.223701 0 0 1 -14.31488,14.2237 l 0,-14.2237 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="14.223701"
+         sodipodi:rx="14.314879"
+         sodipodi:cy="-508.17429"
+         sodipodi:cx="643.22607"
+         sodipodi:type="arc"
+         id="path3960-1-6-9"
+          />
+      <path
+         transform="matrix(0,-1,1,0,0,0)"
+         d="m -657.81311,378.87137 a 14.848508,14.922456 0 0 1 -14.84851,14.92245 l 0,-14.92245 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="14.922456"
+         sodipodi:rx="14.848508"
+         sodipodi:cy="378.87137"
+         sodipodi:cx="-672.66162"
+         sodipodi:type="arc"
+         id="path3960-3-2-8-1"
+          />
+      <path
+         transform="scale(-1,-1)"
+         d="m -394.45602,-672.6615 a 14.922646,14.848697 0 0 1 -14.92264,14.8487 l 0,-14.8487 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="14.848697"
+         sodipodi:rx="14.922646"
+         sodipodi:cy="-672.6615"
+         sodipodi:cx="-409.37866"
+         sodipodi:type="arc"
+         id="path3960-1-6-7"
+          />
+      <path
+         transform="matrix(0,-1,1,0,0,0)"
+         d="m -493.25058,645.98657 a 13.223542,13.342284 0 0 1 -13.22354,13.34229 l 0,-13.34229 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.342284"
+         sodipodi:rx="13.223542"
+         sodipodi:cy="645.98657"
+         sodipodi:cx="-506.47412"
+         sodipodi:type="arc"
+         id="path3960-3-2-8-4-3"
+          />
+      <path
+         transform="scale(-1,-1)"
+         d="m -659.92091,-506.474 a 13.342454,13.22371 0 0 1 -13.34246,13.22371 l 0,-13.22371 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.22371"
+         sodipodi:rx="13.342454"
+         sodipodi:cy="-506.474"
+         sodipodi:cx="-673.26337"
+         sodipodi:type="arc"
+         id="path3960-1-6-8-5"
+          />
+      <rect
+         
+         id="rect3515"
+         width="33.436058"
+         height="27.400391"
+         x="146.47211"
+         y="432.00226" />
+      <path
+         d="m 299.4837,576.0116 a 13.577482,13.465402 0 0 1 -13.57748,13.4654 l 0,-13.4654 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.465402"
+         sodipodi:rx="13.577482"
+         sodipodi:cy="576.0116"
+         sodipodi:cx="285.90622"
+         sodipodi:type="arc"
+         id="path3960-1"
+          />
+      <rect
+         
+         id="rect3515-2"
+         width="17.02441"
+         height="27.378466"
+         x="146.41994"
+         y="581.83148" />
+      <path
+         transform="matrix(0,1,-1,0,0,0)"
+         d="m 589.4767,-313.66351 a 13.46523,13.57731 0 0 1 -13.46523,13.57731 l 0,-13.57731 z"
+         sodipodi:end="1.5707963"
+         sodipodi:start="0"
+         sodipodi:ry="13.57731"
+         sodipodi:rx="13.46523"
+         sodipodi:cy="-313.66351"
+         sodipodi:cx="576.01147"
+         sodipodi:type="arc"
+         id="path3960-3-2"
+          />
+      <path
+         
+         d="m 378.8072,626.5829 0,45.96195 129.29953,0 0,-29.29443 -10.6066,0 0,-17.03236 -26.76904,0 0,17.53744 -62.62946,0 0,-17.16752 z"
+         id="path3579"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccc" />
+      <rect
+         
+         id="rect3515-3"
+         width="16.288721"
+         height="27.400391"
+         x="243.81993"
+         y="417.59058" />
+      <rect
+         
+         id="rect3515-58"
+         width="14.681579"
+         height="35.355343"
+         x="341.23065"
+         y="397.59061" />
+      <rect
+         
+         id="rect3515-54"
+         width="12.360149"
+         height="27.400391"
+         x="430.78421"
+         y="388.48346" />
+      <rect
+         
+         id="rect3515-4"
+         width="10.227806"
+         height="27.400391"
+         x="521.65015"
+         y="397.40677" />
+      <rect
+         
+         id="rect3626"
+         width="96.071426"
+         height="29.821428"
+         x="521.60712"
+         y="576.64789" />
+      <rect
+         
+         id="rect3628"
+         width="29.390358"
+         height="110.39862"
+         x="380.23462"
+         y="716.20782" />
+      <g
+         id="g3517">
+        <path
+           
+           d="m 652.75,806.6122 0,-25.5 26.5,0"
+           id="path3927"
+           inkscape:connector-curvature="0" />
+        <path
+           sodipodi:nodetypes="ccccccccccccccc"
+           inkscape:connector-curvature="0"
+           id="path3642"
+           d="m 603.75,689.14792 75,0 0.30405,91.7642 23.05633,-0.0717 -0.11038,26.0218 -23.25,-0.21429 -0.0899,19.91782 -25.66006,0.0822 0.002,-20.03838 -28.53761,0.0384 0,-72.5 26.60714,0 0,-17.85715 -47.32143,0 z"
+            />
+      </g>
+      <path
+         
+         d="m 673.26667,506.37475 -27.02158,0 0,-13.19512 -14.83661,0 0,-27.71606 11.55362,0 0,-34.88708 50.96647,0 0,18.57143 -20.625,0 z"
+         id="path3644"
+         inkscape:connector-curvature="0" />
+      <rect
+         
+         id="rect3690"
+         width="28.392832"
+         height="16.517839"
+         x="646.07141"
+         y="536.73724" />
+      <rect
+         
+         id="rect3692"
+         width="31.071415"
+         height="20.53574"
+         x="378.39285"
+         y="902.89789" />
+      <rect
+         
+         id="rect3789"
+         width="27.061996"
+         height="39.951523"
+         x="653.08636"
+         y="883.71722" />
+      <rect
+         
+         id="rect3958"
+         width="27.411631"
+         height="18.780354"
+         x="648.67676"
+         y="624.50861" />
+      <path
+         
+         d="m 341.17902,576.07528 0,50.43187 -24.31741,-0.0384 0.0241,17.67598 -28.38573,-0.0126 -0.15933,-17.64233 -27.78438,0.0173 -0.125,-15.37957 -16.50272,0 0,-25.8094 16.60995,0 0.0796,-9.2429 z"
+         id="path3561"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccc" />
+    </g>
+  </g>
+</svg>
