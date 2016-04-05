@@ -1,26 +1,27 @@
 (function() {
 	var app = angular.module('floorplan',[]);
 
-	app.controller("FloorplanController", function(socket) {
+	app.controller("FloorplanController",['$scope','socket', function($scope, socket) {
+
         //Controller Logic
-        this.floors = floors;
-        this.group = 'All';
-        this.display = 'Both';
+        $scope.floors = floors;
+		$scope.group = 'All';
+		$scope.display = 'Both';
 
-        this.setGroup = function(group) {
-            this.group = group;
+		$scope.setGroup = function(group) {
+			$scope.group = group;
 		};
 
-        this.isGroup = function(group) {
-			return this.group === group;
+		$scope.isGroup = function(group) {
+			return $scope.group === group;
 		};
 
-        this.setDisplay = function(display) {
-            this.display = display;
+		$scope.setDisplay = function(display) {
+			$scope.display = display;
 		};
 
-        this.isDisplay = function(display) {
-			return this.display === display;
+		$scope.isDisplay = function(display) {
+			return $scope.display === display;
 		};
 
         //Socket listeners
@@ -34,13 +35,17 @@
 				var component = messageTopic[3];
                 var payload = socket.arrayBufferToString(msg.message);
                 var timestamp = msg.timestamp;
-				console.log("Floor: "+floorName+"\nRoom: "+room+"\n"+component+": "+payload.toString()+"\nTime: "+timestamp);
+				console.log("Floor: "+floorName+"\nRoom: "+room+"\n"+component+": "+payload+"\nTime: "+timestamp);
+
+				console.log(payload.length);
+				$scope.floors[floorName][room].setState(payload);
+				$scope.floors[floorName][room].setLastUpdated(timestamp);
 			});
             socket.emit('subscribe',{topic:'londonbridge/#'});
         });
-	});
+	}]);
 
-	app.filter('replaceUnderscores', function() {
+	app.filter('replaceUnderscores', [ function() {
 		return function(input, replacement) {
 			if(typeof input == "string") {
 				if (replacement === null) {
@@ -52,10 +57,28 @@
 				return null;
 			}
 		};
-	});
+	}]);
+
+    app.filter('roomColour', [ function() {
+        return function (input) {
+            if (input == "active") {
+                return "rgb(0,255,0)";
+            } else if (input == "caution") {
+                return "rgb(0,0,255)";
+            } else if (input == "emergency") {
+                return "rgb(255,0,0)";
+            } else if (input == "inactive"){
+                return "rgb(255,0,255)";
+            } else if (input == "error") {
+                return "rgb(255,255,0)";
+			}else { //not a recognised state, set to "offline" default
+                return "rgb(0,0,0)";
+            }
+        }
+    }]);
 
     //inspired by HTML5Rocks.com - http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
-    app.factory('socket', function($rootScope) {
+    app.factory('socket', ['$rootScope', function($rootScope) {
         var socket = io.connect('192.168.1.20:8083', {
             path:'/js/lib/socket.io'
         });
@@ -79,231 +102,169 @@
                 })
             },
             arrayBufferToString: function(data) {
-                return String.fromCharCode.apply(null, new Uint8Array(data));
+				var string = String.fromCharCode.apply(null, new Uint8Array(data));
+                return string.slice(0,-1); //removes hidden character at end
             }
         }
-    });
+    }]);
 
-	var floors = [
-		{
-		name: "Ground",
-		img: "img/ground.svg",
-		rooms : [
-			{
-				id: "room_1",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_2",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_3",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "1830_bridge",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "burning_bridge",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_4",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "william_wallace",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_5",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "compressor",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "viking_room_3",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "viking_room_2",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "crown_room",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "roman_walkthrough",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "viking_room_1",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_6",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "bathroom",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "museum",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "roman_room",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "cafe",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_7",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "retail",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "photo",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_8",
-				state: "Offline",
-				lastUpdated: "N/A"
+	app.directive('groundFloor', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'view/ground.html'
+		};
+	});
+
+	app.directive('basement', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'view/basement.html'
+		};
+	});
+
+
+	app.directive('svgGroundFloor', ['$compile', function ($compile) {
+		return {
+			restrict: 'E',
+			templateUrl: 'img/ground.svg',
+			link: function (scope, element, attrs) {
+				var regions = element[0].querySelectorAll('.room');
+				angular.forEach(regions, function (path, key) {
+					var roomElement = angular.element(path);
+					roomElement.attr("room", "");
+					roomElement.attr("floor", "ground");
+					roomElement.attr("floors", 'floors');
+					$compile(roomElement)(scope);
+				})
 			}
-		]},
-		{
-		name: "Basement",
-		img: "img/basement.svg",
-		rooms : [
-			{
-				id: "staff_bathroom",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_1",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "staff_corridor",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_2",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "staff_room",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "construction_site",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_3",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "root_maze",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "bone_yard",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_4",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "boiler_room",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "big_squeeze",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "spider_room",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "tombs",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "sewers",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_5",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_6",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_7",
-				state: "Offline",
-				lastUpdated: "N/A"
-			},
-			{
-				id: "room_8",
-				state: "Offline",
-				lastUpdated: "N/A"
+		}
+	}]);
+
+	app.directive('svgBasement', ['$compile', function ($compile) {
+		return {
+			restrict: 'E',
+			templateUrl: 'img/basement.svg',
+			link: function (scope, element, attrs) {
+				var regions = element[0].querySelectorAll('.room');
+				angular.forEach(regions, function (path, key) {
+					var roomElement = angular.element(path);
+					roomElement.attr("room", "");
+					roomElement.attr("floor", "basement");
+					roomElement.attr("floor", "floors");
+					$compile(roomElement)(scope);
+				})
 			}
-		]}
-	];
+		}
+	}]);
+
+	app.directive('room', ['$compile', function ($compile) {
+		return {
+			restrict: 'A',
+			scope : {
+				floors: "="
+			},
+			link: function (scope, element, attrs) {
+				scope.elementId = element.attr("id");
+				scope.floor = element.attr("floor");
+				element.attr("ng-attr-fill", "{{floors[floor][elementId].getState()|roomColour}}");
+				element.removeAttr("room");
+				$compile(element)(scope);
+			}
+		}
+	}]);
+
+/*	app.directive('basementRoom', ['$compile', function ($compile) {
+		return {
+			restrict: 'A',
+			scope : {
+				floor: "="
+			},
+			link: function (scope, element, attrs) {
+				scope.elementId = element.attr("id");
+				console.log(scope.elementId);
+				console.log(scope.floor);
+				scope.roomClick = function () {
+					alert(scope.floor[scope.elementId].state);
+				};
+				element.attr("ng-click", "roomClick()");
+				element.removeAttr("basement-room");
+				$compile(element)(scope);
+			}
+		}
+	}]);*/
+
+	function Room() {
+		var state = "offline";
+		var lastUpdated = "N/A";
+
+		this.getState = function() {
+			return state;
+		};
+
+		this.isState = function(newState){
+			return state === newState;
+		}
+
+		this.setState = function(newState) {
+			state = newState;
+		};
+
+		this.getLastUpdated = function() {
+			return lastUpdated;
+		};
+
+		this.setLastUpdated = function(newUpdated) {
+			lastUpdated = newUpdated;
+		}
+	}
+
+	var floors = {
+		"ground": {
+			"room_1" : new Room(),
+			"room_2": new Room(),
+			"room_3": new Room(),
+			"1830_bridge": new Room(),
+			"burning_bridge":new Room(),
+			"room_4": new Room(),
+			"william_wallace":new Room(),
+			"room_5": new Room(),
+			"compressor": new Room(),
+			"viking_room_3": new Room(),
+			"viking_room_2": new Room(),
+			"crown_room": new Room(),
+			"roman_walkthrough": new Room(),
+			"viking_room_1": new Room(),
+			"room_6": new Room(),
+			"bathroom": new Room(),
+			"museum": new Room(),
+			"roman_room":new Room(),
+			"cafe": new Room(),
+			"room_7": new Room(),
+			"retail": new Room(),
+			"photo": new Room(),
+			"room_8": new Room()
+		},
+		"basement": {
+			"staff_bathroom": new Room(),
+			"room_1": new Room(),
+			"staff_corridor": new Room(),
+			"room_2": new Room(),
+			"staff_room": new Room(),
+			"construction_site": new Room(),
+			"room_3": new Room(),
+			"root_maze": new Room(),
+			"bone_yard": new Room(),
+			"room_4": new Room(),
+			"boiler_room": new Room(),
+			"big_squeeze": new Room(),
+			"spider_room": new Room(),
+			"tombs": new Room(),
+			"sewers": new Room(),
+			"room_5": new Room(),
+			"room_6": new Room(),
+			"room_7": new Room(),
+			"room_8": new Room()
+		}
+	};
+
 })();

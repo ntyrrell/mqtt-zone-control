@@ -1,0 +1,17 @@
+<div class="panel panel-default" ng-class="{'col-sm-6':isGroup('All')}">
+    <h2>Ground</h2>
+    <svg-ground-floor ng-show="(isDisplay('Both') || isDisplay('Map'))"></svg-ground-floor >
+    <!--floorCtrl.floors['ground'].length && -->
+    <table id="datatable" class="panel panel-body" ng-show="(isDisplay('Both') || isDisplay('Table'))">
+        <tr>
+            <th class="td_room_name">Room Name</th>
+            <th class="td_room_state">State</th>
+            <th class="td_room_update">Last Updated</th>
+        </tr>
+        <tr ng-repeat="(room,prop) in floors['ground']">
+            <td class="td_room_name">{{room | replaceUnderscores:' '}}</td>
+            <td class="td_room_state" ng-class="{active:prop.isState('active'),caution:prop.isState('caution'),emergency:prop.isState('emergency'),error:prop.isState('error'),inactive:prop.isState('inactive')}">{{prop.getState()}}</td>
+            <td class="td_room_update">{{prop.getLastUpdated()}}</td>
+        </tr>
+    </table>
+</div>

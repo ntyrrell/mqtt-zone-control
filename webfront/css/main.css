@@ -1,0 +1,72 @@
+body {
+    background: #0f0f0f url("/img/background.jpg") repeat fixed left top;
+}
+
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+table {
+    text-transform: capitalize;
+}
+
+.panel {
+    background-color:#0f0f0f;
+}
+
+.dropdown-menu {
+    text-transform: capitalize;
+}
+
+#map {
+    background-color: #4b4b4b;
+}
+
+#datatable {
+    background-color: #7d7d7d;
+    color: #ffffff;
+    width: 100%;
+}
+
+.outline, .door, .divider, #group_corridors {
+    stroke-width: 2;
+    stroke: #fff;
+
+    -webkit-transition: stroke 0.5s, stroke-width 0.5s;
+    -o-transition: stroke 0.5s, stroke-width 0.5s;
+    transition: stroke 0.5s, stroke-width 0.5s;
+}
+.room_name {
+    fill: #fff;
+}
+.td_room_name, .td_room_update {
+    width:40%;
+}
+.td_room_state {
+    width:20%;
+}
+
+.active {
+    background-color: #0f0;
+}
+
+.caution {
+    background-color: #00f;
+}
+
+.emergency {
+    background-color: #f00;
+}
+
+.inactive {
+    background-color: #f0f;
+}
+
+.error {
+    background-color: #ff0;
+}
+
+.offline {
+    background-color: #000;
+}

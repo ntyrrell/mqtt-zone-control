@@ -2,21 +2,36 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-        xmlns:dc="http://purl.org/dc/elements/1.1/"
-        xmlns:cc="http://creativecommons.org/ns#"
-        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-        width="100%"
-        height="100%"
-        viewBox="0 0 805 667"
-        id="basement"
-        version="1.1"
-        inkscape:version="0.91 r13725"
-        sodipodi:docname="basement.svg">
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100%"
+   height="100%"
+   viewBox="0 0 805 667"
+   id="basement"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="basement.svg">
+  <style
+     id="room_style">
+      .outline, .door, .divider, #group_corridors {
+            stroke-width: 2;
+            stroke: #000000;
+
+            -webkit-transition: stroke 0.5s, stroke-width 0.5s;
+            -o-transition: stroke 0.5s, stroke-width 0.5s;
+            transition: stroke 0.5s, stroke-width 0.5s;
+      }
+      .room_name {
+            fill: #000000;
+      }
+  </style>
   <title
-     id="floortitle">Basement</title>
+     id="title4151">TLBE Basement Floorplan</title>
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -27,8 +42,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="267.43831"
-     inkscape:cy="399.8652"
+     inkscape:cx="850.97903"
+     inkscape:cy="238.24079"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,27 +73,24 @@
      inkscape:label="basement"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-131.07237,-369.79107)"
-     >
+     transform="translate(-131.07237,-369.79107)">
     <g
        id="staff_bathroom"
        transform="matrix(1.0017879,0,0,0.99423416,1.7647638,2.6794228)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_staff_bathroom"
-         y="480.28717"
-         x="155.60669"
-         
+         y="483.87875"
+         x="141.42068"
          xml:space="preserve"
          class="room_name"><tspan
-           y="480.28717"
-           x="155.60669"
+           y="483.87875"
+           x="141.42068"
            id="tspan3873-86-0"
            sodipodi:role="line">Staff</tspan><tspan
            id="tspan4093"
-           y="502.16217"
-           x="155.60669"
+           y="504.75006"
+           x="141.42068"
            sodipodi:role="line">W/C</tspan></text>
       <rect
          ry="0"
@@ -87,7 +99,6 @@
          height="62.881996"
          width="49.118668"
          id="outline_staff_bathroom"
-
          transform="translate(0,308.26772)"
          class="outline" />
       <path
@@ -101,7 +112,6 @@
          sodipodi:cx="-180.69279"
          sodipodi:type="arc"
          id="door_1_staff_bathroom"
-
          class="door" />
     </g>
     <g
@@ -109,15 +119,13 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_room_1"
          y="543.20135"
-         x="172.31244"
-         
+         x="148.35529"
          xml:space="preserve"
          class="room_name"><tspan
            y="543.20135"
-           x="172.31244"
+           x="148.35529"
            id="tspan3873-86"
            sodipodi:role="line">Room 1</tspan></text>
       <path
@@ -125,14 +133,12 @@
          inkscape:connector-curvature="0"
          id="outline_room_1"
          d="m 213.43297,651.25007 c -34.39595,-19.12089 -81.82236,-19.30296 -81.82236,-19.30296 l 0.005,-104.50954 81.76108,-0.27084 z"
-
          class="outline" />
       <g
          transform="translate(2.714785,-0.1894036)"
          id="doors_room_1"
          class="doors">
         <path
-
            id="door_1_room_1"
            sodipodi:type="arc"
            sodipodi:cx="-605.81915"
@@ -145,7 +151,6 @@
            transform="matrix(0,-1,1,0,0,0)"
            class="door" />
         <path
-
            id="door_2_room_1"
            sodipodi:type="arc"
            sodipodi:cx="-210.7242"
@@ -164,16 +169,13 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         transform="translate(0,308.26772)"
-         sodipodi:linespacing="125%"
          id="text_staff_corridor"
-         y="165.8741"
-         x="310.84329"
-         
+         y="470.14182"
+         x="274.90756"
          xml:space="preserve"
          class="room_name"><tspan
-           y="165.8741"
-           x="310.84329"
+           y="470.14182"
+           x="274.90756"
            id="tspan3873-8"
            sodipodi:role="line">Staff Corridor</tspan></text>
       <path
@@ -181,7 +183,6 @@
          inkscape:connector-curvature="0"
          id="outline_staff_corridor"
          d="m 407.96797,468.45744 -80.38899,16.3253 -16.8308,0 0,16.508 -97.47972,0 0,25.87635 -32.57742,0 0,-62.46114 32.57742,0 0,8.71257 17.9302,0 0,-8.71256 79.44736,-21.28786 0,5.55124 16.85398,0 0,-10 80.61995,-21.60205 0,15.53063 14.73375,0 0,35.62499 z"
-
          class="outline" />
     </g>
     <g
@@ -189,15 +190,13 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_room_2"
          y="533.66742"
-         x="268.10376"
-         
+         x="246.14304"
          xml:space="preserve"
          class="room_name"><tspan
            y="533.66742"
-           x="268.10376"
+           x="246.14304"
            id="tspan3873-2"
            sodipodi:role="line">Room 2</tspan></text>
       <rect
@@ -206,14 +205,12 @@
          height="160.17856"
          width="80.446434"
          id="outline_room_2"
-
          class="outline" />
       <g
          transform="matrix(-1,0,0,-1,466.07403,1107.0477)"
          id="doors_room_2"
          class="doors">
         <path
-
            id="door_1_room_2"
            sodipodi:type="arc"
            sodipodi:cx="-605.81915"
@@ -226,7 +223,6 @@
            transform="matrix(0,-1,1,0,0,0)"
            class="door" />
         <path
-
            id="door_2_room_2"
            sodipodi:type="arc"
            sodipodi:cx="-210.7242"
@@ -245,27 +241,24 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_staff_room"
          y="509.6347"
-         x="367.97327"
-         
+         x="350.0054"
          xml:space="preserve"
          class="room_name"><tspan
            y="509.6347"
-           x="367.97327"
+           x="350.0054"
            id="tspan3873-8-2"
            sodipodi:role="line">Staff</tspan><tspan
            id="tspan4206"
-           y="531.5097"
-           x="367.97327"
+           y="524.6347"
+           x="350.0054"
            sodipodi:role="line">Room</tspan></text>
       <path
          transform="translate(0,308.26772)"
          inkscape:connector-curvature="0"
          id="outline_staff_room"
          d="m 327.57898,176.42402 0,126.55975 80.56213,0 0,-142.82902 z"
-
          class="outline" />
       <path
          transform="matrix(0.19044074,0.98169869,-0.98169869,0.19044074,0,308.26772)"
@@ -278,7 +271,6 @@
          sodipodi:cx="235.29971"
          sodipodi:type="arc"
          id="door_1_staff_room"
-
          class="door" />
     </g>
     <g
@@ -286,22 +278,18 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_construction_site"
          y="432.53989"
-         x="459.267"
-         
+         x="431.31699"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan3399"
-           
            y="432.53989"
-           x="459.267"
+           x="444"
            sodipodi:role="line">Construct</tspan><tspan
            id="tspan4219"
-           
-           y="451.28989"
-           x="459.267"
+           y="447.53989"
+           x="444"
            sodipodi:role="line">Site</tspan></text>
       <rect
          ry="0"
@@ -310,7 +298,6 @@
          height="242.85716"
          width="75.000015"
          id="outline_construction_site"
-
          class="outline" />
     </g>
     <g
@@ -318,23 +305,19 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_room_3"
          y="385.51111"
-         x="548.50134"
-         
+         x="526.54028"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan4227-2"
-           
            y="385.51111"
-           x="548.50134"
+           x="526.54028"
            sodipodi:role="line">Room 3</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="outline_room_3"
          d="m 510.02293,459.96543 0,-89.4562 78.51717,0 0,89.4562 z"
-
          class="outline" />
     </g>
     <g
@@ -342,23 +325,18 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         transform="translate(0,308.26772)"
-         sodipodi:linespacing="125%"
          id="text_root_maze"
-         y="167.84097"
-         x="549.26447"
-         
+         y="476.1087"
+         x="533.29279"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan3399-0"
-           
-           y="167.84097"
-           x="549.26447"
+           y="476.1087"
+           x="533.29279"
            sodipodi:role="line">Root</tspan><tspan
            id="tspan4227"
-           
-           y="189.71597"
-           x="549.26447"
+           y="491.1087"
+           x="533.29279"
            sodipodi:role="line">Maze</tspan></text>
       <rect
          transform="translate(0,308.26772)"
@@ -368,13 +346,11 @@
          height="201.53571"
          width="78.571442"
          id="outline_root_maze"
-
          class="outline" />
       <path
          inkscape:connector-curvature="0"
          id="divider_1_root_maze"
          d="m 564.28572,661.46934 0,-70.35714"
-
          class="divider" />
     </g>
     <g
@@ -382,17 +358,14 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_bone_yard"
          y="429.52704"
-         x="767.50659"
-         
+         x="739.55615"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan4227-2-4"
-           
            y="429.52704"
-           x="767.50659"
+           x="739.55615"
            sodipodi:role="line">Bone Yard</tspan></text>
       <path
          sodipodi:nodetypes="ccccccccccccc"
@@ -400,13 +373,11 @@
          inkscape:connector-curvature="0"
          id="outline_bone_yard"
          d="m 599.02046,124.3245 0,-21.67688 117.71559,0 0,-4.293153 30.16933,0 0,4.323783 183.44511,0.47444 0.25254,74.49875 -331.58257,0 0,-25.92655 15.72827,0 0,-27.40039 z"
-
          class="outline" />
       <g
          id="doors_bone_yard"
          class="doors">
         <path
-
            id="door_1_bone_yard"
            sodipodi:type="arc"
            sodipodi:cx="614.6958"
@@ -418,7 +389,6 @@
            d="m 627.98138,432.59073 a 13.285583,13.402616 0 0 1 -13.28558,13.40261 l 0,-13.40261 z"
            class="door" />
         <path
-
            id="door_2_bone_yard"
            sodipodi:type="arc"
            sodipodi:cx="-459.99084"
@@ -437,37 +407,30 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         transform="scale(1.0148113,0.98540488)"
-         sodipodi:linespacing="125%"
          id="text_room_4"
-         y="524.51208"
-         x="633.20844"
-         
+         y="514.51208"
+         x="613.59393"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan3775-2-4-7"
-           
-           y="524.51208"
-           x="633.20844"
+           y="514.51208"
+           x="613.59393"
            sodipodi:role="line">Room 4</tspan></text>
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          id="outline_room_4"
          d="m 713.03572,499.68363 -113.9137,0 0,72.14286 113.73512,0 z"
-
          class="outline" />
       <path
          inkscape:connector-curvature="0"
          id="divider_1_room_4"
          d="m 712.91516,542.36144 -94.82807,0"
-
          class="divider" />
       <g
          id="doors_room_4"
          class="doors">
         <path
-
            id="door_1_room_4"
            sodipodi:type="arc"
            sodipodi:cx="-712.89911"
@@ -480,7 +443,6 @@
            transform="scale(-1,-1)"
            class="door" />
         <path
-
            id="door_2_room_4"
            sodipodi:type="arc"
            sodipodi:cx="542.36163"
@@ -493,7 +455,6 @@
            transform="matrix(0,1,-1,0,0,0)"
            class="door" />
         <path
-
            id="door_3_room_4"
            sodipodi:type="arc"
            sodipodi:cx="513.80829"
@@ -506,7 +467,6 @@
            transform="matrix(0,1,-1,0,0,0)"
            class="door" />
         <path
-
            id="door_4_room_4"
            sodipodi:type="arc"
            sodipodi:cx="-689.51807"
@@ -525,30 +485,24 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         transform="scale(1.0148113,0.98540489)"
-         sodipodi:linespacing="125%"
          id="text_boiler_room"
-         y="522.31476"
-         x="798.33228"
-         
+         y="516.31476"
+         x="798.5365"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan3399-0-3-6-5-7-3-9"
-           
-           y="522.31476"
-           x="798.33228"
+           y="516.31476"
+           x="798.5365"
            sodipodi:role="line">Boiler</tspan><tspan
            id="tspan3775-2-4"
-           
-           y="543.87048"
-           x="798.33228"
+           y="531.31476"
+           x="798.5365"
            sodipodi:role="line">Room</tspan></text>
       <path
          sodipodi:nodetypes="ccccccc"
          inkscape:connector-curvature="0"
          id="outline_boiler_room"
          d="m 712.94968,500.01892 197.82679,0 -23.75869,71.82944 -145.6375,0 0.24602,-46.45171 -28.72084,0.0575 z"
-
          class="outline" />
     </g>
     <g
@@ -556,20 +510,16 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_big_squeeze"
-         y="624.99158"
-         x="635.6817"
-         
+         y="622.99158"
+         x="597.74896"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan4227-2-0"
-           
-           y="624.99158"
-           x="635.6817"
+           y="622.99158"
+           x="597.74896"
            sodipodi:role="line">Big Squeeze</tspan></text>
       <rect
-
          id="outline_big_squeeze"
          width="95.744926"
          height="29.821428"
@@ -582,18 +532,14 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         transform="matrix(1.0148113,0,0,0.98540488,0,308.26772)"
-         sodipodi:linespacing="125%"
          id="text_spider_room"
-         y="301.88852"
-         x="818.35449"
-         
+         y="606.6925"
+         x="790.95837"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan3775-2-4-0"
-           
-           y="301.88852"
-           x="818.35449"
+           y="606.6925"
+           x="790.95837"
            sodipodi:role="line">Spider Room</tspan></text>
       <path
          transform="translate(0,308.26772)"
@@ -601,20 +547,17 @@
          inkscape:connector-curvature="0"
          id="outline_spider_room"
          d="m 684.46429,351.23734 221.07143,0 19.10354,-70.84895 -240.35354,0 z"
-
          class="outline" />
       <path
          transform="translate(0,308.26772)"
          inkscape:connector-curvature="0"
          id="divider_1_spider_room"
          d="m 713.03229,280.05566 0,22.47589 51.02184,0"
-
          class="divider" />
       <g
          id="doors_spider_room"
          class="doors">
         <path
-
            id="door_1_spider_room"
            sodipodi:type="arc"
            sodipodi:cx="-659.29089"
@@ -627,7 +570,6 @@
            transform="matrix(0,-1,1,0,0,0)"
            class="door" />
         <path
-
            id="door_2_spider_room"
            sodipodi:type="arc"
            sodipodi:cx="-741.41107"
@@ -646,76 +588,65 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_tombs_1"
          y="696.44983"
-         x="515.07953"
-         
+         x="497.11163"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan4206-3"
            y="696.44983"
-           x="515.07953"
+           x="497.11163"
            sodipodi:role="line">Tombs</tspan></text>
       <text
-         sodipodi:linespacing="125%"
          id="text_tombs_2"
          y="715.42584"
-         x="800.40393"
-         
+         x="816.37561"
          xml:space="preserve"
          class="room_name"><tspan
            id="tspan4206-3-9"
            y="715.42584"
-           x="800.40393"
+           x="816.37561"
            sodipodi:role="line">Tombs</tspan></text>
       <path
          sodipodi:nodetypes="ccccccccc"
          inkscape:connector-curvature="0"
          id="outline_tombs"
          d="m 476.53946,678.35322 425.40049,0 -19.24745,72.54677 -140.55472,0.0115 -0.0474,-16.73794 -29.25496,-0.14207 -0.0193,16.93523 -236.40655,-0.0234 z"
-
          class="outline" />
       <g
          id="dividers_tombs"
          class="dividers">
         <path
-
            d="m 551.96429,370.34448 0,48.39286"
            id="divider_1_tombs"
            inkscape:connector-curvature="0"
            transform="translate(0,308.26772)"
            class="divider" />
         <path
-
            d="m 586.25,442.84448 0,-51.42857"
            id="divider_2_tombs"
            inkscape:connector-curvature="0"
            transform="translate(0,308.26772)"
            class="divider" />
         <path
-
            d="m 607.5,370.34448 0,48.03572"
            id="divider_3_tombs"
            inkscape:connector-curvature="0"
            transform="translate(0,308.26772)"
            class="divider" />
         <path
-
            d="m 650,442.1302 0,-51.42858 -21.78571,0 0,51.98897"
            id="divider_4_tombs"
            inkscape:connector-curvature="0"
            transform="translate(0,308.26772)"
            class="divider" />
         <path
-
            d="m 691.82823,370.0855 0,48.36106 -21.84455,0 0,-48.36106"
            id="divider_5_tombs"
            inkscape:connector-curvature="0"
            transform="translate(0,308.26772)"
            class="divider" />
         <path
-
            d="m 712.78889,442.81649 0,-55.17959 86.74685,0"
            id="divider_6_tombs"
            inkscape:connector-curvature="0"
@@ -727,7 +658,6 @@
          transform="translate(265.73543,0.01537413)"
          class="doors">
         <path
-
            id="door_1_tombs"
            sodipodi:type="arc"
            sodipodi:cx="-476.34955"
@@ -740,7 +670,6 @@
            transform="scale(-1,-1)"
            class="door" />
         <path
-
            id="door_2_tombs"
            sodipodi:type="arc"
            sodipodi:cx="-734.08508"
@@ -760,14 +689,12 @@
        class="room">
       <text
          xml:space="preserve"
-         
-         x="624.24005"
+         x="604.27545"
          y="788.78448"
          id="text_sewers"
-         sodipodi:linespacing="125%"
          class="room_name"><tspan
            sodipodi:role="line"
-           x="624.24005"
+           x="604.27545"
            y="788.78448"
            id="tspan4206-3-6">Sewers</tspan></text>
       <path
@@ -775,7 +702,6 @@
          inkscape:connector-curvature="0"
          id="outline_sewers"
          d="m 408.39286,768.96928 465.53571,0 0,73.14521 -131.78571,0 0,-15.68748 -29.375,0 -0.0893,-12.85239 0.17857,28.58741 -304.52927,-0.002 z"
-
          class="outline" />
     </g>
     <g
@@ -783,23 +709,19 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         transform="translate(0,308.26772)"
-         sodipodi:linespacing="125%"
          id="text_room_5"
-         y="574.09448"
-         x="582.14288"
-         
+         y="880.09448"
+         x="600.11102"
          xml:space="preserve"
          class="room_name"><tspan
-           y="574.09448"
-           x="582.14288"
+           y="880.09448"
+           x="600.11102"
            id="tspan4832"
            sodipodi:role="line">Room 5</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="outline_room_5"
          d="m 395.80357,861.7372 0,76.30786 464.59386,0 20.46209,-76.36554 z"
-
          class="outline" />
     </g>
     <g
@@ -807,36 +729,30 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_room_6"
-         y="978.85199"
-         x="498.36206"
-         
+         y="974.85199"
+         x="484.38705"
          xml:space="preserve"
          class="room_name"><tspan
-           y="978.85199"
-           x="498.36206"
+           y="974.85199"
+           x="484.38705"
            id="tspan4832-3"
            sodipodi:role="line">Room 6</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="outline_room_6"
          d="m 395.48047,958.7907 49.6981,0 0,15.94479 31.25,0 0,-15.97514 81.74107,0 0,41.89655 -34.24107,0 83.75,0 0,34.3168 -133.92857,0 -78.26953,0 z"
-
          class="outline" />
       <path
          inkscape:connector-curvature="0"
          id="divider_1_room_6"
          d="m 418.57143,958.96935 0,76.18295"
-
          class="divider" />
       <g
          id="doors_room_6"
-
          transform="matrix(0,-1.0671278,1.0694734,0,-226.9435,1473.6464)"
          class="doors">
         <path
-
            id="door_1_room_6"
            sodipodi:type="arc"
            sodipodi:cx="-734.08508"
@@ -849,7 +765,6 @@
            transform="matrix(0,-1,1,0,0,0)"
            class="door" />
         <path
-
            id="door_2_room_6"
            sodipodi:type="arc"
            sodipodi:cx="-476.34955"
@@ -868,29 +783,25 @@
        transform="matrix(1.0017879,0,0,1,1.7647638,0)"
        class="room">
       <text
-         sodipodi:linespacing="125%"
          id="text_room_7"
-         y="976.70923"
-         x="639.07635"
-         
+         y="974.70923"
+         x="621.10822"
          xml:space="preserve"
          class="room_name"><tspan
-           y="976.70923"
-           x="639.07635"
+           y="974.70923"
+           x="621.10822"
            id="tspan4832-34"
            sodipodi:role="line">Room 7</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="outline_room_7"
          d="m 558.03572,958.79077 183.75,0 0,26.78572 -38.46562,0 0,49.34621 -95.64153,0 0,-34.1676 -49.50893,0 z"
-
          class="outline" />
       <g
          id="doors_room_7"
          transform="matrix(0,1.0671278,-1.0694734,0,1392.7471,526.61376)"
          class="doors">
         <path
-
            id="door_1_room_7"
            sodipodi:type="arc"
            sodipodi:cx="-476.34955"
@@ -903,7 +814,6 @@
            transform="scale(-1,-1)"
            class="door" />
         <path
-
            id="door_2_room_7"
            sodipodi:type="arc"
            sodipodi:cx="-734.08508"
@@ -919,25 +829,22 @@
     </g>
     <g
        id="room_8"
-       transform="matrix(1.0017879,0,0,1,1.7647638,0)"
-       class="room">
+       class="room"
+       transform="matrix(1.0017879,0,0,1,1.7647638,0)">
       <text
-         sodipodi:linespacing="125%"
          id="text_room_8"
-         y="979.56635"
-         x="792.64777"
-         
+         y="973.56635"
+         x="774.67963"
          xml:space="preserve"
          class="room_name"><tspan
-           y="979.56635"
-           x="792.64777"
+           y="973.56635"
+           x="774.67963"
            id="tspan4832-39"
            sodipodi:role="line">Room 8</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="outline_room_8"
          d="m 741.78572,958.79077 113.03571,0 -20.53617,76.64203 -131.07097,0 0,-49.85631 38.57143,0 z"
-
          class="outline" />
     </g>
     <g
@@ -952,8 +859,7 @@
          sodipodi:cy="525.4848"
          sodipodi:cx="712.90179"
          sodipodi:type="arc"
-         id="path3960-1-3-0"
-          />
+         id="path3960-1-3-0" />
       <path
          transform="matrix(0,1,-1,0,0,0)"
          d="m 539.3419,-741.43829 a 13.857215,13.95849 0 0 1 -13.85722,13.95849 l 0,-13.95849 z"
@@ -964,10 +870,8 @@
          sodipodi:cy="-741.43829"
          sodipodi:cx="525.48468"
          sodipodi:type="arc"
-         id="path3960-3-2-3-0"
-          />
+         id="path3960-3-2-3-0" />
       <path
-
          id="path3960-1"
          sodipodi:type="arc"
          sodipodi:cx="352.86707"
@@ -982,10 +886,8 @@
          x="213.38078"
          height="27.378466"
          width="17.02441"
-         id="rect3515-2"
-          />
+         id="rect3515-2" />
       <path
-
          id="path3960-3-2"
          sodipodi:type="arc"
          sodipodi:cx="611.19696"
@@ -1001,65 +903,55 @@
          x="497.74506"
          height="27.400391"
          width="12.360149"
-         id="rect3515-54"
-          />
+         id="rect3515-54" />
       <rect
          y="432.59222"
          x="588.61102"
          height="27.400391"
          width="26.137709"
-         id="rect3515-4"
-          />
+         id="rect3515-4" />
       <rect
          y="733.89331"
          x="447.11917"
          height="35.119164"
          width="29.29043"
-         id="rect3628"
-          />
+         id="rect3628" />
       <rect
          y="525.48151"
          x="713.03229"
          height="62.959103"
          width="28.392832"
-         id="rect3690"
-          />
+         id="rect3690" />
       <rect
          y="938.08337"
          x="445.3537"
          height="36.63953"
          width="31.071415"
-         id="rect3692"
-          />
+         id="rect3692" />
       <rect
          y="938.01044"
          x="712.97614"
          height="20.613314"
          width="29.082302"
-         id="rect3789"
-          />
+         id="rect3789" />
       <rect
          y="659.46039"
          x="712.94641"
          height="18.839268"
          width="28.392832"
-         id="rect3690-5"
-          />
+         id="rect3690-5" />
       <rect
          y="485.88901"
          x="712.94641"
          height="14.017839"
          width="28.392832"
-         id="rect3690-8"
-          />
+         id="rect3690-8" />
       <path
-
          d="m 407.84909,302.91036 0,50.38136 -21.84455,0 0,16.66751 13.76333,0 0,7.82869 -35.86219,20.70504 -6.43795,0 0,-44.94871 -28.03173,0 0,-14.52094 -18.54312,0 0,-25.25381 16.64908,0 0,-10.73287 z"
          id="path4444"
          inkscape:connector-curvature="0"
          transform="translate(0,308.26772)" />
       <path
-
          id="path3960-1-5"
          sodipodi:type="arc"
          sodipodi:cx="6.3220863"
@@ -1071,7 +963,6 @@
          d="m 19.899569,-793.94714 a 13.577482,13.465402 0 0 1 -13.5774823,13.4654 l -4e-7,-13.4654 z"
          transform="matrix(-0.8660254,0.5,-0.5,-0.8660254,0,0)" />
       <path
-
          id="path3960-3-2-2"
          sodipodi:type="arc"
          sodipodi:cx="-793.94727"
@@ -1094,8 +985,7 @@
            sodipodi:cy="-734.08496"
            sodipodi:cx="-476.34955"
            sodipodi:type="arc"
-           id="path3960-1-56"
-            />
+           id="path3960-1-56" />
         <path
            transform="matrix(0,-1,1,0,0,0)"
            d="m -719.86302,447.08765 a 14.222065,14.313281 0 0 1 -14.22206,14.31328 l 0,-14.31328 z"
@@ -1106,12 +996,10 @@
            sodipodi:cy="447.08765"
            sodipodi:cx="-734.08508"
            sodipodi:type="arc"
-           id="path3960-3-2-5"
-            />
+           id="path3960-3-2-5" />
       </g>
       <g
          transform="matrix(-1,0,0,-1,923.48458,1468.2091)"
-
          id="g4520-3">
         <path
            transform="scale(-1,-1)"
@@ -1123,8 +1011,7 @@
            sodipodi:cy="-734.08496"
            sodipodi:cx="-476.34955"
            sodipodi:type="arc"
-           id="path3960-1-56-0"
-            />
+           id="path3960-1-56-0" />
         <path
            transform="matrix(0,-1,1,0,0,0)"
            d="m -719.86302,447.08765 a 14.222065,14.313281 0 0 1 -14.22206,14.31328 l 0,-14.31328 z"
@@ -1135,11 +1022,9 @@
            sodipodi:cy="447.08765"
            sodipodi:cx="-734.08508"
            sodipodi:type="arc"
-           id="path3960-3-2-5-5"
-            />
+           id="path3960-3-2-5-5" />
       </g>
       <path
-
          d="m 476.4132,353.38711 -30.17831,0 0,16.69839 -46.46702,0 0,7.70242 -35.80752,20.67348 -6.49262,0 0,44.60762 89.65104,0 0,-17.17259 29.27977,0 z"
          id="path4500"
          inkscape:connector-curvature="0"
@@ -1150,11 +1035,9 @@
          x="712.85455"
          height="35.119164"
          width="29.29043"
-         id="rect3628-3"
-          />
+         id="rect3628-3" />
       <g
          transform="matrix(-1,0,0,-1,1189.22,1467.9566)"
-
          id="g4520-3-1">
         <path
            transform="scale(-1,-1)"
@@ -1166,8 +1049,7 @@
            sodipodi:cy="-734.08496"
            sodipodi:cx="-476.34955"
            sodipodi:type="arc"
-           id="path3960-1-56-0-4"
-            />
+           id="path3960-1-56-0-4" />
         <path
            transform="matrix(0,-1,1,0,0,0)"
            d="m -719.86302,447.08765 a 14.222065,14.313281 0 0 1 -14.22206,14.31328 l 0,-14.31328 z"
@@ -1178,19 +1060,16 @@
            sodipodi:cy="447.08765"
            sodipodi:cx="-734.08508"
            sodipodi:type="arc"
-           id="path3960-3-2-5-5-0"
-            />
+           id="path3960-3-2-5-5-0" />
       </g>
       <rect
          y="826.35748"
          x="712.81775"
          height="35.119164"
          width="29.29043"
-         id="rect3628-3-3"
-          />
+         id="rect3628-3-3" />
       <g
          transform="matrix(-1,0,0,-1,1189.1831,1560.4055)"
-
          id="g4520-3-1-9">
         <path
            transform="scale(-1,-1)"
@@ -1202,8 +1081,7 @@
            sodipodi:cy="-734.08496"
            sodipodi:cx="-476.34955"
            sodipodi:type="arc"
-           id="path3960-1-56-0-4-0"
-            />
+           id="path3960-1-56-0-4-0" />
         <path
            transform="matrix(0,-1,1,0,0,0)"
            d="m -719.86302,447.08765 a 14.222065,14.313281 0 0 1 -14.22206,14.31328 l 0,-14.31328 z"
@@ -1214,18 +1092,15 @@
            sodipodi:cy="447.08765"
            sodipodi:cx="-734.08508"
            sodipodi:type="arc"
-           id="path3960-3-2-5-5-0-5"
-            />
+           id="path3960-3-2-5-5-0-5" />
       </g>
       <rect
          y="842.08411"
          x="446.98788"
          height="19.651857"
          width="29.17738"
-         id="rect3692-8"
-          />
+         id="rect3692-8" />
       <rect
-
          id="rect4938"
          width="30.304577"
          height="16.698389"

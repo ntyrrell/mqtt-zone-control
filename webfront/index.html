@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="floorplan">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +20,8 @@
 
 		<!-- Socket.IO Connection-->
 		<script type="text/javascript" src="js/lib/socket.io/socket.io.js"></script>
+
+		<link href="css/main.css" rel="stylesheet">
 		<!--<script type="text/javascript" src="192.168.1.30:8083/socket.io/socket.io.js"></script>-->
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,7 +31,7 @@
 			<!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
       	<![endif]-->
 	</head>
-	<body ng-controller="FloorplanController as floorCtrl">
+	<body ng-app="floorplan" ng-controller="FloorplanController">
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -49,25 +51,25 @@
 						<li class="dropdown">
 							<a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Floorplan <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li ng-class="{active:floorCtrl.isGroup('All')}">
-									<a href ng-click="floorCtrl.setGroup('All')">All</a>
+								<li ng-class="{active:isGroup('All')}">
+									<a href ng-click="setGroup('All')">All</a>
 								</li>
-								<li ng-repeat="floor in floorCtrl.floors" ng-class="{active:floorCtrl.isGroup(floor.name)}">
-									<a href ng-click="floorCtrl.setGroup(floor.name)">{{floor.name}}</a>
+								<li ng-repeat="(floor,rooms) in floors" ng-class="{active:isGroup(floor)}">
+									<a href ng-click="setGroup(floor)">{{floor}}</a>
 								</li>
 							</ul>
 						</li>
 						<li class="dropdown">
 							<a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Display Options <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li ng-class="{active:floorCtrl.isDisplay('Both')}">
-									<a href ng-click="floorCtrl.setDisplay('Both')">Both Tables &amp; Maps</a>
+								<li ng-class="{active:isDisplay('Both')}">
+									<a href ng-click="setDisplay('Both')">Both Tables &amp; Maps</a>
 								</li>
-								<li ng-class="{active:floorCtrl.isDisplay('Table')}">
-									<a href ng-click="floorCtrl.setDisplay('Table')">Tables Only</a>
+								<li ng-class="{active:isDisplay('Table')}">
+									<a href ng-click="setDisplay('Table')">Tables Only</a>
 								</li>
-								<li ng-class="{active:floorCtrl.isDisplay('Map')}">
-									<a href ng-click="floorCtrl.setDisplay('Map')">Maps Only</a>
+								<li ng-class="{active:isDisplay('Map')}">
+									<a href ng-click="setDisplay('Map')">Maps Only</a>
 								</li>
 							</ul>
 						</li>
@@ -77,22 +79,9 @@
 		</nav>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-6" ng-repeat="floor in floorCtrl.floors">
-					<div class="panel" ng-show="floorCtrl.isGroup('All') || floorCtrl.isGroup(floor.name)">
-						<img class="col-sm-12" ng-show="floorCtrl.isDisplay('Both') || floorCtrl.isDisplay('Map')" ng-src={{floor.img}} />
-						<table class="col-sm-12" ng-show="floor.rooms.length && (floorCtrl.isDisplay('Both') || floorCtrl.isDisplay('Table'))">
-							<tr>
-								<th>Room Name</th>
-								<th>State</th>
-								<th>Last Updated</th>
-							</tr>
-							<tr ng-repeat="room in floor.rooms" style="text-transform: capitalize;">
-								<td>{{room.id | replaceUnderscores:' '}}</td>
-								<td>{{room.state}}</td>
-								<td>{{room.lastUpdated}}</td>
-							</tr>
-						</table>
-					</div>
+				<div class="panel panel-group">
+					<ground-floor ng-show="isGroup('All') || isGroup('ground')"></ground-floor>
+					<!--<basement ng-show="isGroup('All') || isGroup('basement')"></basement>-->
 				</div>
 			</div>
 		</div>
