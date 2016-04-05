@@ -79,10 +79,8 @@
 		</nav>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="panel panel-group">
-					<ground-floor ng-show="isGroup('All') || isGroup('ground')"></ground-floor>
-					<!--<basement ng-show="isGroup('All') || isGroup('basement')"></basement>-->
-				</div>
+				<ground-floor ng-show="isGroup('All') || isGroup('ground')"></ground-floor>
+				<underground ng-show="isGroup('All') || isGroup('underground')"></underground>
 			</div>
 		</div>
 	</body>

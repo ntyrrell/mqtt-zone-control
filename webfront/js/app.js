@@ -37,7 +37,6 @@
                 var timestamp = msg.timestamp;
 				console.log("Floor: "+floorName+"\nRoom: "+room+"\n"+component+": "+payload+"\nTime: "+timestamp);
 
-				console.log(payload.length);
 				$scope.floors[floorName][room].setState(payload);
 				$scope.floors[floorName][room].setLastUpdated(timestamp);
 			});
@@ -115,10 +114,10 @@
 		};
 	});
 
-	app.directive('basement', function() {
+	app.directive('underground', function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'view/basement.html'
+			templateUrl: 'view/underground.html'
 		};
 	});
 
@@ -127,7 +126,7 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'img/ground.svg',
-			link: function (scope, element, attrs) {
+			link: function (scope, element) {
 				var regions = element[0].querySelectorAll('.room');
 				angular.forEach(regions, function (path, key) {
 					var roomElement = angular.element(path);
@@ -140,17 +139,17 @@
 		}
 	}]);
 
-	app.directive('svgBasement', ['$compile', function ($compile) {
+	app.directive('svgUnderground', ['$compile', function ($compile) {
 		return {
 			restrict: 'E',
-			templateUrl: 'img/basement.svg',
-			link: function (scope, element, attrs) {
+			templateUrl: 'img/underground.svg',
+			link: function (scope, element) {
 				var regions = element[0].querySelectorAll('.room');
 				angular.forEach(regions, function (path, key) {
 					var roomElement = angular.element(path);
 					roomElement.attr("room", "");
-					roomElement.attr("floor", "basement");
-					roomElement.attr("floor", "floors");
+					roomElement.attr("floor", "underground");
+					roomElement.attr("floors", "floors");
 					$compile(roomElement)(scope);
 				})
 			}
@@ -163,35 +162,20 @@
 			scope : {
 				floors: "="
 			},
-			link: function (scope, element, attrs) {
+			link: function (scope, element) {
 				scope.elementId = element.attr("id");
 				scope.floor = element.attr("floor");
+/*				scope.roomClick = function () {
+					alert(scope.floors[scope.floor][scope.elementId].getState());
+				};
+				element.attr("ng-click", "roomClick()");*/
 				element.attr("ng-attr-fill", "{{floors[floor][elementId].getState()|roomColour}}");
+				element.removeAttr("floor");
 				element.removeAttr("room");
 				$compile(element)(scope);
 			}
 		}
 	}]);
-
-/*	app.directive('basementRoom', ['$compile', function ($compile) {
-		return {
-			restrict: 'A',
-			scope : {
-				floor: "="
-			},
-			link: function (scope, element, attrs) {
-				scope.elementId = element.attr("id");
-				console.log(scope.elementId);
-				console.log(scope.floor);
-				scope.roomClick = function () {
-					alert(scope.floor[scope.elementId].state);
-				};
-				element.attr("ng-click", "roomClick()");
-				element.removeAttr("basement-room");
-				$compile(element)(scope);
-			}
-		}
-	}]);*/
 
 	function Room() {
 		var state = "offline";
@@ -244,7 +228,7 @@
 			"photo": new Room(),
 			"room_8": new Room()
 		},
-		"basement": {
+		"underground": {
 			"staff_bathroom": new Room(),
 			"room_1": new Room(),
 			"staff_corridor": new Room(),
