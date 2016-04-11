@@ -48,25 +48,33 @@ table {
 }
 
 .active {
-    background-color: #0f0;
+    background-color: #00ff00;
 }
 
 .caution {
-    background-color: #00f;
+    background-color: #0000ff;
 }
 
 .emergency {
-    background-color: #f00;
+    background-color: #ff0000;
 }
 
 .inactive {
-    background-color: #f0f;
+    background-color: #ff00ff;
 }
 
 .error {
-    background-color: #ff0;
+    background-color: #ffff00;
 }
 
 .offline {
-    background-color: #000;
+    background-color: #000000;
+}
+
+.connected {
+    color: #00ff00;
+}
+
+.disconnected {
+    color: #ff0000;
 }

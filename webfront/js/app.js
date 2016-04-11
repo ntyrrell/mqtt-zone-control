@@ -1,12 +1,16 @@
 (function() {
 	var app = angular.module('floorplan',[]);
 
-	app.controller("FloorplanController",['$scope','socket', function($scope, socket) {
+	app.controller("FloorplanController",['$scope','socket','xmlJson', function($scope, socket, xmlJson) {
 
         //Controller Logic
-        $scope.floors = floors;
+        $scope.floors = {};
 		$scope.group = 'All';
 		$scope.display = 'Both';
+		$scope.connectionState = 'Offline';
+
+		loadData('ground');
+		loadData('underground');
 
 		$scope.setGroup = function(group) {
 			$scope.group = group;
@@ -24,9 +28,18 @@
 			return $scope.display === display;
 		};
 
+		$scope.isConnected = function() {
+			return $scope.connectionState === 'Online';
+		};
+
+		$scope.isDisconnected = function() {
+			return $scope.connectionState === 'Offline';
+		};
+
         //Socket listeners
         socket.on('connect', function () {
             console.log('connected to MQTT broker');
+			$scope.connectionState = 'Online';
 			socket.on('mqtt', function (msg) {
 				console.log('message received from MQTT broker');
 				var messageTopic = msg.topic.split('/');
@@ -40,8 +53,27 @@
 				$scope.floors[floorName][room].setState(payload);
 				$scope.floors[floorName][room].setLastUpdated(timestamp);
 			});
+			socket.on('disconnect', function (msg) {
+				console.log('Disconnected from MQTT broker');
+				$scope.connectionState = 'Offline';
+			});
             socket.emit('subscribe',{topic:'londonbridge/#'});
         });
+
+		function loadData(floorname) {
+			xmlJson.getData(floorname).success(function(data){
+				//Add a new floor key
+				var floor = data.svg._id;
+				var xml = data.svg.g;
+				$scope.floors[floor] = {};
+				for (var i = 0; i<xml.g.length; i++) {
+					if (xml.g[i]._class === "room") {
+						//Add a new room with a key value equal to the id
+						$scope.floors[floor][xml.g[i]._id] = new Room();
+					}
+				}
+			});
+		};
 	}]);
 
 	app.filter('replaceUnderscores', [ function() {
@@ -102,10 +134,26 @@
             },
             arrayBufferToString: function(data) {
 				var string = String.fromCharCode.apply(null, new Uint8Array(data));
-                return string.slice(0,-1); //removes hidden character at end
+                return string.replace(/\W/g, ''); //removes hidden non-alphanumeric characters
             }
         }
     }]);
+
+	app.factory('xmlJson', ['$http', function($http) {
+		var factory = [];
+		factory.getData = function(floorname) {
+			return $http({
+				method: 'GET',
+				url: '/img/'+floorname+'.svg',
+				transformResponse: function(data) {
+					var x2js = new X2JS();
+					return x2js.xml_str2json(data);
+				}
+			});
+		};
+
+		return factory;
+	}]);
 
 	app.directive('groundFloor', function() {
 		return {
@@ -187,7 +235,7 @@
 
 		this.isState = function(newState){
 			return state === newState;
-		}
+		};
 
 		this.setState = function(newState) {
 			state = newState;
@@ -199,56 +247,7 @@
 
 		this.setLastUpdated = function(newUpdated) {
 			lastUpdated = newUpdated;
-		}
+		};
 	}
-
-	var floors = {
-		"ground": {
-			"room_1" : new Room(),
-			"room_2": new Room(),
-			"room_3": new Room(),
-			"1830_bridge": new Room(),
-			"burning_bridge":new Room(),
-			"room_4": new Room(),
-			"william_wallace":new Room(),
-			"room_5": new Room(),
-			"compressor": new Room(),
-			"viking_room_3": new Room(),
-			"viking_room_2": new Room(),
-			"crown_room": new Room(),
-			"roman_walkthrough": new Room(),
-			"viking_room_1": new Room(),
-			"room_6": new Room(),
-			"bathroom": new Room(),
-			"museum": new Room(),
-			"roman_room":new Room(),
-			"cafe": new Room(),
-			"room_7": new Room(),
-			"retail": new Room(),
-			"photo": new Room(),
-			"room_8": new Room()
-		},
-		"underground": {
-			"staff_bathroom": new Room(),
-			"room_1": new Room(),
-			"staff_corridor": new Room(),
-			"room_2": new Room(),
-			"staff_room": new Room(),
-			"construction_site": new Room(),
-			"room_3": new Room(),
-			"root_maze": new Room(),
-			"bone_yard": new Room(),
-			"room_4": new Room(),
-			"boiler_room": new Room(),
-			"big_squeeze": new Room(),
-			"spider_room": new Room(),
-			"tombs": new Room(),
-			"sewers": new Room(),
-			"room_5": new Room(),
-			"room_6": new Room(),
-			"room_7": new Room(),
-			"room_8": new Room()
-		}
-	};
 
 })();
