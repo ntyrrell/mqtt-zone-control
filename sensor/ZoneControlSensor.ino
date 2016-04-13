@@ -4,6 +4,8 @@ Copyright (c) Nicholas Tyrrell, Bournemouth University
 Code inspired by http://www.eclipse.org/paho/clients/c/embedded/
 */
 
+#define MQTTCLIENT_QOS2 1
+
 #include <SPI.h>
 #include <Ethernet2.h>
 #include <IPStack.h>
@@ -15,18 +17,19 @@ EthernetClient ethClient;
 IPStack ipstack(ethClient);
 
 //IP constants
-byte mac[] = { 0x90, 0xA2, 0xDA, 0x10, 0x39, 0x37 }; //MAC address for sensor device
+byte mac[] = { 0x90, 0xA2, 0xDA, 0x10, 0x39, 0x2A }; //MAC address for sensor device
 
 //MQTT constants
 const char* mainTopic = "londonbridge";
-MQTT::QoS qos = MQTT::QOS1;
+MQTT::QoS qos = MQTT::QOS2;
 bool retained = true;
 int timeout = 5000; //5 seconds for client to publish before timing out
 
 //MQTT variables
 MQTT::Client<IPStack, Countdown> mqttClient = MQTT::Client<IPStack, Countdown>(ipstack, timeout);
 char floorName[21] = "ground"; //floor of room within building
-char room[21] = "roman"; //name of room within building
+char room[21] = "william_wallace"; //name of room within building
+char* clientId = "sensor-2"; //sensor id
 
 //Room State
 enum RoomState
@@ -58,7 +61,8 @@ connects the sensor to the MQTT broker over TCP/IP
 */
 void connect() {
 	//initialise variables
-	char host[] = "iot.eclipse.org";
+	//char host[] = "iot.eclipse.org";
+	IPAddress host(192, 168, 1, 30); //eMQTT broker local IP address
 	int port = 1883;
 	int returnCode;
 
@@ -81,7 +85,7 @@ void connect() {
 		data.MQTTVersion = 4;
 		data.cleansession = 1;
 		data.keepAliveInterval = 10;
-		data.clientID.cstring = (char*)"sensor-1";
+		data.clientID.cstring = clientId;
 		data.will.topicName.cstring = (char*)willTopicBuffer;
 		data.will.qos = 2;
 		data.will.retained = 1;
